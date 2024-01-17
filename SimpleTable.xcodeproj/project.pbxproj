@@ -16,6 +16,8 @@
 		C8CC83862B585F6200C44F6B /* SimpleTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC83852B585F6200C44F6B /* SimpleTableTests.swift */; };
 		C8CC83902B585F6300C44F6B /* SimpleTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC838F2B585F6300C44F6B /* SimpleTableUITests.swift */; };
 		C8CC83922B585F6300C44F6B /* SimpleTableUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC83912B585F6300C44F6B /* SimpleTableUITestsLaunchTests.swift */; };
+		C8CC83A02B5862CE00C44F6B /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC839F2B5862CE00C44F6B /* TaskManager.swift */; };
+		C8CC83A22B58664B00C44F6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC83A12B58664B00C44F6B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		C8CC838B2B585F6200C44F6B /* SimpleTableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8CC838F2B585F6300C44F6B /* SimpleTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableUITests.swift; sourceTree = "<group>"; };
 		C8CC83912B585F6300C44F6B /* SimpleTableUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C8CC839F2B5862CE00C44F6B /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		C8CC83A12B58664B00C44F6B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		C8CC836D2B585F5E00C44F6B /* SimpleTable */ = {
 			isa = PBXGroup;
 			children = (
+				C8CC839E2B5862AC00C44F6B /* Model */,
 				C8CC836E2B585F5E00C44F6B /* AppDelegate.swift */,
 				C8CC83702B585F5E00C44F6B /* SceneDelegate.swift */,
 				C8CC83722B585F5E00C44F6B /* ViewController.swift */,
@@ -125,6 +130,15 @@
 				C8CC83912B585F6300C44F6B /* SimpleTableUITestsLaunchTests.swift */,
 			);
 			path = SimpleTableUITests;
+			sourceTree = "<group>";
+		};
+		C8CC839E2B5862AC00C44F6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8CC839F2B5862CE00C44F6B /* TaskManager.swift */,
+				C8CC83A12B58664B00C44F6B /* Constants.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8CC83A22B58664B00C44F6B /* Constants.swift in Sources */,
 				C8CC83732B585F5E00C44F6B /* ViewController.swift in Sources */,
 				C8CC836F2B585F5E00C44F6B /* AppDelegate.swift in Sources */,
+				C8CC83A02B5862CE00C44F6B /* TaskManager.swift in Sources */,
 				C8CC83712B585F5E00C44F6B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
