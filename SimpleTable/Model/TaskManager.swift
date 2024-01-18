@@ -7,12 +7,6 @@
 
 import Foundation
 
-enum TaskAction {
-    case Add
-    case Delete
-    case Edit
-}
-
 struct Task {
     var firstName: String
     var lastName: String
@@ -25,14 +19,17 @@ class TaskManager {
     private init() {}
     var tasks: [Task] = []
     
-    func taskAction(actionType: TaskAction, at index: Int) {
-        switch actionType {
-            case .Delete:
-                tasks.remove(at: index)
-            case .Edit:
-                print(tasks[index])
-            default:
-            tasks.append(Task(firstName: "", lastName: "", email: ""))
-        }
+    func deleteTask(at index: Int) {
+        tasks.remove(at: index)
+    }
+    
+    func createTask(firstName: String, lastName: String, email: String) {
+        let newTask = Task(firstName: firstName, lastName: lastName, email: email)
+        tasks.append(newTask)
+    }
+    
+    func updateTask(firstName: String, lastName: String, email: String, at index: Int) {
+        let updatedTask = Task(firstName: firstName, lastName: lastName, email: email)
+        tasks[index] = updatedTask
     }
 }
