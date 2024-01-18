@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if let cell = tableView.dequeueReusableCell(withIdentifier: K.Identifiers.taskViewCell) as? TaskViewCell {
             let task = taskManager.tasks[indexPath.row]
             
-            cell.delegate = self
+//            cell.delegate = self
             cell.nameLabel.text = task.firstName + " " + task.lastName
             cell.emailLabel.text = task.email
             cell.index = indexPath.row
@@ -26,6 +26,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: nil) { _, _, completion in
+            self.taskManager.tasks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            completion(true)
+        }
+        deleteAction.image = UIImage(systemName: "trash")
+        deleteAction.backgroundColor = .systemRed
+        
+        let editAction = UIContextualAction(style: .destructive, title: nil) { _, _, completion in
+            self.performSegue(withIdentifier: K.Identifiers.editToTaskView, sender: tableView.cellForRow(at: indexPath))
+            completion(true)
+        }
+        editAction.image = UIImage(systemName: "pencil")
+        editAction.backgroundColor = .systemGray
+        
+        let config = UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+        return config
     }
     
 
@@ -68,15 +88,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 }
 
-extension ViewController: TaskViewCellDelegate {
-    func editPressed(cell: TaskViewCell) {
-        if let indexPath = tableView.indexPath(for: cell) {
-            performSegue(withIdentifier: K.Identifiers.editToTaskView, sender: cell)
-        }
-    }
-    
-    func deletePressed(cell: TaskViewCell) {
-        taskManager.tasks.remove(at: cell.index)
-        tableView.reloadData()
-    }
-}
+//extension ViewController: TaskViewCellDelegate {
+//    func editPressed(cell: TaskViewCell) {
+//        if let indexPath = tableView.indexPath(for: cell) {
+//            performSegue(withIdentifier: K.Identifiers.editToTaskView, sender: cell)
+//        }
+//    }
+//
+//    func deletePressed(cell: TaskViewCell) {
+//        taskManager.tasks.remove(at: cell.index)
+//        tableView.reloadData()
+//    }
+//}

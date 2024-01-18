@@ -7,10 +7,10 @@
 
 import UIKit
 
-protocol TaskViewCellDelegate: AnyObject {
-    func editPressed(cell: TaskViewCell)
-    func deletePressed(cell: TaskViewCell)
-}
+//protocol TaskViewCellDelegate: AnyObject {
+//    func editPressed(cell: TaskViewCell)
+//    func deletePressed(cell: TaskViewCell)
+//}
 
 class TaskViewCell: UITableViewCell {
     @IBOutlet weak var emailLabel: UILabel!
@@ -19,7 +19,7 @@ class TaskViewCell: UITableViewCell {
     let taskManager = TaskManager.shared
     var index: Int = 0
     
-    weak var delegate: TaskViewCellDelegate?
+//    weak var delegate: TaskViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,12 +32,12 @@ class TaskViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func editButtonPressed(_ sender: Any) {
-        delegate?.editPressed(cell: self)
-    }
-    
-    
-    @IBAction func deleteButtonPressed(_ sender: Any) {
-        delegate?.deletePressed(cell: self)
-    }
+//    @IBAction func editButtonPressed(_ sender: Any) {
+//        delegate?.editPressed(cell: self)
+//    }
+//
+//
+//    @IBAction func deleteButtonPressed(_ sender: Any) {
+//        delegate?.deletePressed(cell: self)
+//    }
 }

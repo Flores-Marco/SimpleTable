@@ -17,63 +17,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="hTu-9Z-Z4R">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XQY-YS-u3M">
+                        <rect key="frame" x="0.0" y="5" width="320" height="50"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XQY-YS-u3M">
-                                <rect key="frame" x="0.0" y="0.0" width="85" height="60"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAz-VA-GlG" userLabel="NameLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="85" height="27.666666666666668"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqo-Wi-xHv" userLabel="EmailLabel">
-                                        <rect key="frame" x="0.0" y="32.666666666666664" width="85" height="27.333333333333336"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lQY-81-RxW" userLabel="ButtonsStackView">
-                                <rect key="frame" x="235" y="0.0" width="85" height="60"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTs-oR-j58">
-                                        <rect key="frame" x="2" y="0.0" width="81" height="27.666666666666668"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Edit"/>
-                                        <connections>
-                                            <action selector="editButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PRr-Zz-ixs"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUj-hd-zQe">
-                                        <rect key="frame" x="2" y="32.666666666666664" width="81" height="27.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Delete">
-                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="deleteButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sQz-yo-6Fk"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="uTs-oR-j58" secondAttribute="trailing" constant="2" id="5pO-lb-P9o"/>
-                                    <constraint firstItem="LUj-hd-zQe" firstAttribute="leading" secondItem="lQY-81-RxW" secondAttribute="leading" constant="2" id="P5h-1l-vkk"/>
-                                    <constraint firstAttribute="trailing" secondItem="LUj-hd-zQe" secondAttribute="trailing" constant="2" id="eXN-vz-2gc"/>
-                                    <constraint firstItem="uTs-oR-j58" firstAttribute="leading" secondItem="lQY-81-RxW" secondAttribute="leading" constant="2" id="gYk-p4-FlM"/>
-                                </constraints>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAz-VA-GlG" userLabel="NameLabel">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="22.666666666666668"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqo-Wi-xHv" userLabel="EmailLabel">
+                                <rect key="frame" x="0.0" y="27.666666666666664" width="320" height="22.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="hTu-9Z-Z4R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NHG-wA-Oqk"/>
-                    <constraint firstAttribute="bottom" secondItem="hTu-9Z-Z4R" secondAttribute="bottom" id="O9c-a7-Fbf"/>
-                    <constraint firstAttribute="trailing" secondItem="hTu-9Z-Z4R" secondAttribute="trailing" id="Z2M-FY-Cie"/>
-                    <constraint firstItem="hTu-9Z-Z4R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="stH-ly-lZX"/>
+                    <constraint firstAttribute="trailing" secondItem="XQY-YS-u3M" secondAttribute="trailing" id="ACo-BR-mKu"/>
+                    <constraint firstAttribute="bottom" secondItem="XQY-YS-u3M" secondAttribute="bottom" constant="5" id="a8F-fG-he0"/>
+                    <constraint firstItem="XQY-YS-u3M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="mcE-4a-hg3"/>
+                    <constraint firstItem="XQY-YS-u3M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="u1X-yZ-nVV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -87,9 +53,6 @@
     <resources>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
